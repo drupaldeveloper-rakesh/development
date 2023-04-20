@@ -1,1 +1,2 @@
+Query for two tables join with getting rows as comma seperated from second table
 SELECT tbl_1.*, GROUP_CONCAT(tbl_2.column SEPARATOR ', ') FROM tbl_1 JOIN tbl_2 ON tbl_1.id = tbl_2.reference_column_of_tbl_1 WHERE tbl_1.condition_column = 'ANY_VALUE' GROUP BY tbl_1.id;
